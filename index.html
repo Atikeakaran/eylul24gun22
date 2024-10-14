@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Diziler</title>
+</head>
+
+<body>
+
+    <script src="yaz.js"></script>
+    <script>
+        let a = 3;
+        let b = 4;
+        let c = 7;
+        //let top = [a=3 , b=4 , c=7]
+
+        let toplam = a + b + c;
+        ciz(toplam);
+
+        let apartman = ["betül", "güneş", "metin", "burak"];
+        ciz("Apartmandaki kat satısı: " + apartman.length);
+        ciz("dizi elemanları: " + apartman.toString());
+        ciz(apartman);
+        //"diziye eleman ekleme: canap
+        apartman.push("canap");
+        ciz("canap eklendi: <br> " + apartman);
+
+        //dizinin belirli bir sıradaki elemanına erişme
+        ciz("dizinin 3 nolu indeksindeki eleman <br>" + apartman[3]);
+
+        // 1.indekse "mahmut" stringini yerleştir.
+        apartman[1]="MAHMUT";
+        ciz("apartmanın 1. katına mahmut taşındı: <br>"+ apartman);
+
+        // bir dizinin başına eleman ekleme
+        apartman.unshift("altuğ");
+        ciz("dizinin başına altuğ eklendi: <br> " + apartman );
+
+        //hem alır hem siler
+        let ilki = apartman.shift();
+        yaz("silinen: " + ilki);
+        ciz("dizinin ilk elemanı sildik: <br>" + apartman);
+
+        //pop sondan hem alır hem siler
+        let sonu = apartman.pop();
+        yaz("silinen: " + sonu);
+        ciz("dizinin son elemanı silindi: <br>" +apartman);
+
+        // dizinin 2. indeksindeki bir adet elemanı sil
+        apartman.splice(2, 1);
+        yaz("2. indeksteki elemanı sildikten sonra:");
+        ciz(apartman);
+
+        // dizinin 2. indeksindeki eleman ekleme
+        apartman.splice(2, 0, "sezai");
+        yaz("1. indeksteki elemanı değiştirme:");
+        ciz(apartman);     
+        
+        /*
+        *Bu ders saatinde yapılanlar
+        - dizi tanımladık
+        - elemanlarına eriştik (indeks no ile)
+        - eleman güncelledik (indeks no ile)
+        - başa, sondan 
+        */
+    </script>
+</body>
+
+</html>
